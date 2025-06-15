@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<link href="favicon.png" rel="icon" type="image/png"/><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solar Company do Brasil</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; }
+    header {
+      background-color: #003366; /* azul escuro */
+      color: #fff;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+    }
+    .banner {
+  height: 400px;
+  margin-top: 70px;
+  background-image: url('Capa.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.banner::before {
+  display: none;
+}
+.banner h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px black;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+    section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 { color: #cc0000; margin-bottom: 1rem; }
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .produto {
+      flex: 1 1 200px;
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .produto img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+    .contato p { margin-bottom: 0.5rem; }
+    .mapa {
+      width: 100%;
+      height: 300px;
+      margin-top: 1rem;
+      border: 0;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 0.8rem 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      nav a { margin: 0.5rem 0; }
+      .produtos { flex-direction: column; }
+      .banner { flex-direction: column; height: auto; }
+      .banner::before { display: none; }
+    }
+  
+.produto img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2) drop-shadow(0 0 6px rgba(255, 0, 0, 0.5));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+</style>
+<style>
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mobile-menu a {
+    margin: 0.5rem 0;
+  }
+  @media (max-width: 768px) {
+    nav .menu-links {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .mobile-menu {
+      display: flex;
+    }
+  }
+</style>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+</head>
+<body>
+<header>
+<nav>
+<div style="display: flex; align-items: center; gap: 10px;">
+<img alt="Logo" src="Logo.png" style="height: 40px;"/>
+<strong>Solar Company do Brasil</strong>
+</div>
+<div>
+<a href="#home">Home</a>
+<a href="#sobre">Sobre</a>
+<a href="#produtos">Produtos</a>
+<a href="#contato">Contato</a>
+</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu"><a href="#home">Home</a><a href="#sobre">Sobre</a><a href="#produtos">Produtos</a><a href="#contato">Contato</a></div>
+</header> <div class="banner" id="home">
+<h1>Materiais elétricos e energia solar</h1>
+</div> <section id="sobre">
+<h2>Sobre a Empresa</h2>
+<p>Somos especialistas em soluções de energia solar e fornecimento de materiais elétricos. A Solar Company do Brasil oferece tecnologia, economia e sustentabilidade para residências e empresas.</p>
+</section> <section id="produtos">
+<h2>Produtos</h2>
+<div class="produtos">
+<div class="produto">
+<img alt="Painel Solar" src="Secaosolar.png">
+<h3>Energia Solar</h3>
+<p>Alta eficiência e durabilidade</p>
+</img></div>
+<div class="produto">
+<img alt="Fios e Cabos" src="MateriaisEletricos_final.png"/>
+<h3>Materiais Elétricos</h3>
+<p>Materiais de qualidade para instalações seguras</p>
+</div>
+<div class="produto">
+<img alt="Materiais Hidráulicos" src="MateriaisHidraulicos_final.png"/>
+<h3>Materiais Hidráulicos</h3>
+<p>Componentes para sistemas hidráulicos e sanitários</p>
+</div>
+</div>
+</section> <section id="contato">
+<h2>Contato</h2>
+<p><strong>Endereço:</strong> Av. Amazonas, 1521 - Brasileia - Betim</p>
+<p><strong>Telefone:</strong> (31) 3592-3190</p>
+<p><strong>Email:</strong> solarcompanydobrasil@gmail.com</p>
+<p><strong>Atendimento:</strong> Seg à Sex 7h às 17:30h | Sáb 7h às 12:30h</p>
+<iframe class="mapa" src="https://www.google.com/maps?q=Av.+Amazonas,+1521+-+Brasileia+-+Betim&amp;output=embed"></iframe>
+</section> <a class="whatsapp" href="https://wa.me/553135923190" target="_blank">
+    Fale conosco no WhatsApp
+  </a>
+</body>
+</html>
